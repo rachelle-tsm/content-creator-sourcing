@@ -599,9 +599,14 @@
         .section {
           padding: 72px 24px;
         }
-        .cards-3,
-        .sol-cards {
+        .cards-3 {
           grid-template-columns: 1fr 1fr;
+        }
+        .sol-cards {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .addon-grid {
+          grid-template-columns: repeat(4, 1fr) !important;
         }
         .who-cards {
           grid-template-columns: 1fr;
@@ -612,6 +617,10 @@
         .video-scroll-section {
           padding: 48px 0 48px 24px;
         }
+      }
+      @media (max-width: 640px) {
+        .sol-cards { grid-template-columns: 1fr; }
+        .addon-grid { grid-template-columns: 1fr 1fr !important; }
       }
       @media (max-width: 580px) {
         .stats {
@@ -631,6 +640,7 @@
 
         /* Hide nav CTA button on mobile */
         .nav-btn { display: none; }
+        .addon-grid { grid-template-columns: 1fr !important; }
 
         /* +2px on body text only — eyebrows, headlines, buttons excluded */
         .hero-sub { font-size: 19px; }
@@ -1062,6 +1072,45 @@
           <span class="btn-sub"
             >15 minutes · We'll map out your creator fulfillment workflow</span
           >
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD-ON SERVICES -->
+    <div class="section">
+      <div class="section-inner">
+        <div class="pill">» &nbsp;Add-on Services</div>
+        <h2>Extend Your <em>Package</em></h2>
+        <p class="section-desc">Need more than creator fulfillment? Stack on any of these services to build a full end-to-end content operation.</p>
+        <div class="cards-3 addon-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <div class="wcard-icon">
+              <img src="revison_icon.svg" style="width: 36px; height: 36px;" />
+            </div>
+            <h3 style="margin: 0;">Video editing</h3>
+            <p style="margin: 0;">Fast, on-brand edits optimized for TikTok and paid social.</p>
+          </div>
+          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <div class="wcard-icon">
+              <img src="graph_icon.svg" style="width: 36px; height: 36px;" />
+            </div>
+            <h3 style="margin: 0;">Creative strategy</h3>
+            <p style="margin: 0;">Hook angles, content pillars, and briefs built around your brand goals.</p>
+          </div>
+          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <div class="wcard-icon">
+              <img src="mail_icon.svg" style="width: 36px; height: 36px;" />
+            </div>
+            <h3 style="margin: 0;">Script writing</h3>
+            <p style="margin: 0;">High-converting scripts written for UGC-native performance.</p>
+          </div>
+          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <div class="wcard-icon">
+              <img src="target_icon.svg" style="width: 36px; height: 36px;" />
+            </div>
+            <h3 style="margin: 0;">Meta ad management</h3>
+            <p style="margin: 0;">We run and optimize your paid social campaigns end to end.</p>
+          </div>
         </div>
       </div>
     </div>
