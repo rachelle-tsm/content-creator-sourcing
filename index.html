@@ -535,6 +535,59 @@
         color: #555;
       }
 
+      /* CLIENTS MARQUEE */
+      .clients-section {
+        padding: 64px 0;
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+        overflow: hidden;
+      }
+      .clients-section .pill {
+        margin-bottom: 16px;
+      }
+      .clients-heading {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: clamp(24px, 3vw, 36px);
+        color: var(--white);
+        margin-bottom: 36px;
+      }
+      .marquee-row {
+        display: flex;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      }
+      .marquee-inner {
+        display: flex;
+        gap: 16px;
+        animation: marquee 22s linear infinite;
+        white-space: nowrap;
+      }
+      .marquee-inner:hover {
+        animation-play-state: paused;
+      }
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .logo-pill {
+        background: #1a1a1a;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 12px 28px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--grey-light);
+        white-space: nowrap;
+        transition: border-color 0.2s, color 0.2s;
+      }
+      .logo-pill:hover {
+        border-color: var(--purple);
+        color: var(--white);
+      }
+
       /* RESPONSIVE */
       @media (max-width: 860px) {
         nav {
@@ -636,143 +689,114 @@
       </div>
       <div class="video-scroll-track" id="videoTrack">
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="jada video copy.mov" type="video/quicktime" />
-            <source src="jada video copy.mov" type="video/mp4" />
-          </video>
+          <!-- VIDEO 1: Skincare (jada video) — replace YjMS0xTNt-k with your YouTube video ID -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249600?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Skincare</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="zara video copy.mov" type="video/quicktime" />
-            <source src="zara video copy.mov" type="video/mp4" />
-          </video>
+          <!-- VIDEO 2: Fashion (zara video) — replace qb4OEPSmWsE -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249616?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Fashion</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="Testimonial - M copy 2.mp4" type="video/mp4" />
-          </video>
+          <!-- VIDEO 3: Mens Skincare (Testimonial M) — replace XFjRC-VEqPY -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249650?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Mens Skincare</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="Royal Match txt copy 2.mp4" type="video/mp4" />
-          </video>
+          <!-- VIDEO 4: Gaming App (Royal Match) — replace q1fMt4V9ziY -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249598?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Gaming App</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="Video 2 copy.mov" type="video/quicktime" />
-            <source src="Video 2 copy.mov" type="video/mp4" />
-          </video>
+          <!-- VIDEO 5: In Store Demo (Video 2) — replace oHN5shysy4o -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249645?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">In Store Demo</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="F winways text script 2 copy 2.MP4" type="video/mp4" />
-          </video>
+          <!-- VIDEO 6: Sports Betting (F winways) — replace _7FPm58RvFs -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249634?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Sports Betting</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="Hopper copy 2.mp4" type="video/mp4" />
-          </video>
+          <!-- VIDEO 7: Travel App (Hopper) — replace hTeUmktK_Nk -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249641?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Travel App</p>
         </div>
         <div class="video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            style="
-              width: 300px;
-              height: 530px;
-              border-radius: 12px;
-              object-fit: cover;
-            "
-          >
-            <source src="Sheen C 1 copy 2.mp4" type="video/mp4" />
-          </video>
+          <!-- VIDEO 8: Skincare (Sheen C) — replace eZI_3ZqW4VU -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249620?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
           <p class="video-label">Skincare</p>
+        </div>
+        <div class="video-card">
+          <!-- VIDEO 9: Add your 9th video — replace MJZE6iZ_8kc -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249644?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
+          <p class="video-label">Label 9</p>
+        </div>
+        <div class="video-card">
+          <!-- VIDEO 10: Add your 10th video — replace YjMS0xTNt-k0 -->
+          <iframe
+            src="https://player.vimeo.com/video/1211249600?autoplay=1&muted=1&loop=1&background=1"
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            style="width:300px;height:530px;border-radius:12px;display:block;"
+          ></iframe>
+          <p class="video-label">Label 10</p>
         </div>
       </div>
     </div>
@@ -790,6 +814,39 @@
       <div class="stat">
         <div class="stat-num">FAST</div>
         <div class="stat-label">Creator turnaround — built into the system</div>
+      </div>
+    </div>
+
+    <!-- CLIENTS -->
+    <div class="clients-section">
+      <div class="pill" style="margin-bottom: 16px;">» &nbsp;Previous Clients</div>
+      <p class="clients-heading">Brands We've Created For</p>
+      <div class="marquee-row">
+        <div class="marquee-inner">
+          <div class="logo-pill">ExpressVPN</div>
+          <div class="logo-pill">copy.ai</div>
+          <div class="logo-pill">Mejuri</div>
+          <div class="logo-pill">Three Ships</div>
+          <div class="logo-pill">Hopper</div>
+          <div class="logo-pill">Royal Match</div>
+          <div class="logo-pill">ROAR Organic</div>
+          <div class="logo-pill">WeCook</div>
+          <div class="logo-pill">Basic Eco</div>
+          <div class="logo-pill">Sheen</div>
+          <div class="logo-pill">Winways</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="logo-pill">ExpressVPN</div>
+          <div class="logo-pill">copy.ai</div>
+          <div class="logo-pill">Mejuri</div>
+          <div class="logo-pill">Three Ships</div>
+          <div class="logo-pill">Hopper</div>
+          <div class="logo-pill">Royal Match</div>
+          <div class="logo-pill">ROAR Organic</div>
+          <div class="logo-pill">WeCook</div>
+          <div class="logo-pill">Basic Eco</div>
+          <div class="logo-pill">Sheen</div>
+          <div class="logo-pill">Winways</div>
+        </div>
       </div>
     </div>
 
@@ -1074,6 +1131,30 @@
       });
       document.getElementById("scrollRight").addEventListener("click", () => {
         track.scrollBy({ left: 332, behavior: "smooth" });
+      });
+
+      // Auto-scroll
+      let autoScroll = setInterval(() => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft >= maxScroll - 10) {
+          track.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          track.scrollBy({ left: 316, behavior: "smooth" });
+        }
+      }, 3000);
+
+      // Pause on hover or touch
+      track.addEventListener("mouseenter", () => clearInterval(autoScroll));
+      track.addEventListener("touchstart", () => clearInterval(autoScroll), { passive: true });
+      track.addEventListener("mouseleave", () => {
+        autoScroll = setInterval(() => {
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          if (track.scrollLeft >= maxScroll - 10) {
+            track.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            track.scrollBy({ left: 316, behavior: "smooth" });
+          }
+        }, 3000);
       });
     </script>
   </body>
