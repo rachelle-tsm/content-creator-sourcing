@@ -13,17 +13,21 @@
     <link rel="icon" type="image/png" href="logo.png" />
     <style>
       :root {
-        --bg: #111111;
-        --bg-card: #1a1a1a;
-        --purple: #6b4fd8;
-        --purple-light: #7e64ed;
-        --purple-italic: #8b6be8;
-        --border: #2f2f2f;
-        --border-purple: #4a3a8a;
+        --bg: #F5F2EE;
+        --bg-card: #ffffff;
+        --bg-section: #EDE9FF;
+        --purple: #3D2A9E;
+        --purple-mid: #6b4fd8;
+        --purple-light: #9B7FF4;
+        --purple-pale: #EDE9FF;
+        --purple-border: #DDD7F0;
+        --border: #E5E0D8;
         --white: #ffffff;
-        --grey: #888888;
-        --grey-light: #aaaaaa;
-        --text-body: #cccccc;
+        --black: #0f0f0f;
+        --grey: #6B6560;
+        --grey-light: #9B9490;
+        --text-body: #4a4540;
+        --text-heading: #0f0f0f;
       }
       *,
       *::before,
@@ -37,7 +41,7 @@
       }
       body {
         background: var(--bg);
-        color: var(--white);
+        color: var(--text-heading);
         font-family: "Outfit", sans-serif;
         line-height: 1.6;
         overflow-x: hidden;
@@ -50,8 +54,8 @@
 
       /* NAV */
       nav {
-        background: #000000;
-        border-bottom: 1px solid var(--border);
+        background: var(--purple);
+        border-bottom: none;
         padding: 18px 48px;
         display: flex;
         align-items: center;
@@ -68,19 +72,19 @@
         display: none;
       }
       .nav-btn {
-        background: var(--purple);
-        color: #fff;
+        background: #fff;
+        color: var(--purple);
         font-family: "Outfit", sans-serif;
         font-weight: 700;
         font-size: 15px;
         padding: 13px 26px;
-        border-radius: 8px;
+        border-radius: 999px;
         cursor: pointer;
         border: none;
         transition: background 0.2s;
       }
       .nav-btn:hover {
-        background: var(--purple-light);
+        background: var(--purple-pale);
       }
 
       /* PILL LABEL */
@@ -88,7 +92,7 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        border: 1px solid var(--border-purple);
+        border: 1px solid var(--purple-border);
         border-radius: 999px;
         padding: 8px 20px;
         font-family: "Outfit", sans-serif;
@@ -96,7 +100,8 @@
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--white);
+        color: var(--purple);
+        background: var(--purple-pale);
         margin-bottom: 28px;
       }
 
@@ -109,8 +114,8 @@
       }
       .hero-eyebrow {
         display: inline-block;
-        background: var(--purple);
-        color: #fff;
+        background: var(--purple-pale);
+        color: var(--purple);
         font-family: "Outfit", sans-serif;
         font-size: 13px;
         font-weight: 700;
@@ -125,17 +130,17 @@
         font-weight: 400;
         font-size: clamp(32px, 4vw, 52px);
         line-height: 1.12;
-        color: var(--white);
+        color: var(--black);
         margin-bottom: 28px;
       }
       .hero h1 em {
         font-style: italic;
-        color: var(--purple-italic);
+        color: var(--purple);
       }
       .hero-sub {
         font-family: "Outfit", sans-serif;
         font-size: 17px;
-        color: var(--grey-light);
+        color: var(--grey);
         max-width: 560px;
         margin: 0 auto 44px;
         line-height: 1.65;
@@ -170,6 +175,7 @@
       .video-scroll-section {
         padding: 64px 0 64px 48px;
         border-bottom: 1px solid var(--border);
+        background: var(--bg);
         overflow: hidden;
       }
       .video-scroll-header {
@@ -188,8 +194,8 @@
         height: 40px;
         border-radius: 50%;
         border: 1px solid var(--border);
-        background: var(--bg-card);
-        color: var(--white);
+        background: var(--white);
+        color: var(--purple);
         font-size: 18px;
         cursor: pointer;
         transition:
@@ -230,7 +236,7 @@
       }
       .video-label {
         font-size: 13px;
-        color: var(--grey);
+        color: var(--grey-light);
         margin-top: 10px;
         text-align: center;
       }
@@ -239,6 +245,7 @@
       .stats {
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
+        background: var(--white);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
       }
@@ -254,14 +261,15 @@
         font-family: "Instrument Serif", serif;
         font-weight: 400;
         font-style: italic;
+        color: var(--purple);
         font-size: clamp(52px, 6vw, 80px);
-        color: var(--purple-light);
+        color: var(--purple);
         line-height: 1;
         margin-bottom: 12px;
       }
       .stat-label {
         font-size: 14px;
-        color: var(--grey-light);
+        color: var(--grey);
       }
 
       /* SECTION */
@@ -277,16 +285,17 @@
         font-family: "Instrument Serif", serif;
         font-weight: 400;
         font-size: clamp(34px, 4.5vw, 56px);
+        color: var(--black);
         line-height: 1.12;
         margin-bottom: 20px;
       }
       .section h2 em {
         font-style: italic;
-        color: var(--purple-italic);
+        color: var(--purple);
       }
       .section-desc {
         font-size: 16px;
-        color: var(--grey-light);
+        color: var(--grey);
         max-width: 560px;
         margin: 0 auto 56px;
         line-height: 1.65;
@@ -300,7 +309,7 @@
         text-align: left;
       }
       .pcard {
-        background: var(--bg-card);
+        background: var(--white);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 28px 24px 30px;
@@ -329,7 +338,7 @@
         font-family: "Outfit", sans-serif;
         font-size: 16px;
         font-weight: 600;
-        color: var(--white);
+        color: var(--black);
         margin-bottom: 10px;
       }
       .pcard p {
@@ -346,7 +355,7 @@
         text-align: center;
       }
       .scard {
-        background: var(--bg-card);
+        background: var(--white);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 36px 24px 32px;
@@ -378,7 +387,7 @@
         text-align: left;
       }
       .wcard {
-        background: var(--bg-card);
+        background: var(--white);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 24px 20px;
@@ -427,29 +436,31 @@
       .final-section {
         padding: 100px 48px;
         text-align: center;
-        border-top: 1px solid var(--border);
+        background: #0f0f0f;
+        border-top: none;
       }
       .final-divider {
         width: 60px;
         height: 1px;
-        background: var(--border-purple);
+        background: #3D2A9E;
         margin: 0 auto 48px;
       }
       .final-section h2 {
         font-family: "Instrument Serif", serif;
         font-weight: 400;
         font-size: clamp(34px, 4.5vw, 54px);
+        color: #fff;
         line-height: 1.12;
         margin-bottom: 24px;
       }
       .final-section h2 em {
         font-style: italic;
-        color: var(--purple-italic);
+        color: #9B7FF4;
         display: block;
       }
       .final-section p {
         font-size: 16px;
-        color: var(--grey-light);
+        color: #888;
         max-width: 540px;
         margin: 0 auto 44px;
         line-height: 1.7;
@@ -457,10 +468,10 @@
 
       /* FOOTER */
       footer {
-        border-top: 1px solid var(--border);
+        border-top: 1px solid var(--purple-border);
         padding: 28px 48px;
         text-align: center;
-        background: #000000;
+        background: var(--purple-pale);
       }
       footer p {
         font-size: 14px;
@@ -472,7 +483,7 @@
         display: none;
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(30, 20, 60, 0.65);
         z-index: 999;
         align-items: center;
         justify-content: center;
@@ -481,8 +492,8 @@
         display: flex;
       }
       .modal {
-        background: #1a1a1a;
-        border: 1px solid var(--border-purple);
+        background: var(--white);
+        border: 1px solid var(--purple-border);
         border-radius: 16px;
         padding: 44px 40px;
         max-width: 700px;
@@ -506,6 +517,7 @@
         font-family: "Instrument Serif", serif;
         font-size: 28px;
         font-weight: 400;
+        color: var(--black);
         margin-bottom: 8px;
       }
       .modal p {
@@ -519,11 +531,11 @@
         gap: 12px;
       }
       .modal-form input {
-        background: #111;
+        background: var(--white);
         border: 1px solid var(--border);
         border-radius: 8px;
         padding: 14px 16px;
-        color: var(--white);
+        color: var(--black);
         font-size: 15px;
         font-family: "Outfit", sans-serif;
         outline: none;
@@ -532,13 +544,14 @@
         border-color: var(--purple);
       }
       .modal-form input::placeholder {
-        color: #555;
+        color: #aaa;
       }
 
       /* CLIENTS MARQUEE */
       .clients-section {
         padding: 64px 0;
         border-bottom: 1px solid var(--border);
+        background: var(--purple-pale);
         text-align: center;
         overflow: hidden;
       }
@@ -549,8 +562,8 @@
         font-family: "Instrument Serif", serif;
         font-weight: 400;
         font-style: italic;
+        color: var(--black);
         font-size: clamp(24px, 3vw, 36px);
-        color: var(--white);
         margin-bottom: 36px;
       }
       .marquee-row {
@@ -573,19 +586,259 @@
         100% { transform: translateX(-50%); }
       }
       .logo-pill {
-        background: #1a1a1a;
-        border: 1px solid var(--border);
+        background: var(--white);
+        border: 1px solid var(--purple-border);
         border-radius: 999px;
         padding: 12px 28px;
         font-size: 14px;
         font-weight: 600;
-        color: var(--grey-light);
+        color: var(--purple);
         white-space: nowrap;
         transition: border-color 0.2s, color 0.2s;
       }
       .logo-pill:hover {
         border-color: var(--purple);
-        color: var(--white);
+        background: var(--purple-pale);
+      }
+
+      /* PRICING TIERS */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 40px;
+      }
+      .ptier-card {
+        background: var(--white);
+        border: 1px solid var(--purple-border);
+        border-radius: 16px;
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+      }
+      .ptier-card.featured {
+        border: 2px solid var(--purple);
+        background: var(--purple);
+      }
+      .ptier-card.featured .ptier-label,
+      .ptier-card.featured .ptier-name,
+      .ptier-card.featured .pter-price,
+      .ptier-card.featured .pter-volume,
+      .ptier-card.featured .pter-desc,
+      .ptier-card.featured .pter-includes,
+      .ptier-card.featured .pter-item {
+        color: rgba(255,255,255,0.9);
+      }
+      .ptier-card.featured .pter-price {
+        color: #fff;
+      }
+      .ptier-card.featured .pter-divider {
+        border-color: rgba(255,255,255,0.2);
+      }
+      .ptier-card.featured .pter-btn {
+        background: #fff;
+        color: var(--purple);
+        border-color: transparent;
+      }
+      .ptier-card.featured .ptier-popular {
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+      }
+      .ptier-popular {
+        display: inline-block;
+        background: var(--purple-pale);
+        color: var(--purple);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+        align-self: flex-start;
+      }
+      .ptier-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--grey-light);
+        margin-bottom: 6px;
+      }
+      .ptier-name {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--black);
+        margin-bottom: 8px;
+        line-height: 1.2;
+      }
+      .pter-price {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--purple);
+        margin-bottom: 2px;
+      }
+      .pter-price span {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--grey-light);
+      }
+      .pter-volume {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--purple);
+        margin-bottom: 14px;
+        margin-top: 2px;
+      }
+      .pter-desc {
+        font-size: 14px;
+        color: var(--grey);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .pter-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0 0 16px;
+      }
+      .pter-includes {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--grey);
+        margin-bottom: 12px;
+      }
+      .pter-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--grey);
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+      .pter-item::before {
+        content: "✓";
+        color: var(--purple);
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .pter-cta {
+        margin-top: auto;
+        padding-top: 20px;
+      }
+      .pter-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid var(--purple);
+        background: transparent;
+        color: var(--purple);
+        transition: background 0.2s;
+        box-sizing: border-box;
+      }
+      .pter-btn:hover { background: rgba(107,79,216,0.15); }
+      .pter-btn.primary {
+        background: var(--purple);
+        border-color: var(--purple);
+      }
+      .pter-btn.primary:hover { background: #7c5fe8; }
+
+      /* PROCESS SECTION */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 48px;
+        text-align: left;
+      }
+      .process-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px 28px;
+      }
+      .process-num {
+        font-family: "Instrument Serif", serif;
+        font-size: 48px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--purple);
+        line-height: 1;
+        margin-bottom: 16px;
+      }
+      .process-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 10px;
+      }
+      .process-desc {
+        font-size: 14px;
+        color: var(--grey);
+        line-height: 1.65;
+      }
+
+      /* FAQ */
+      .faq-list {
+        max-width: 720px;
+        margin: 48px auto 0;
+        text-align: left;
+        background: var(--white);
+        border: 1px solid var(--purple-border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--purple-border);
+      }
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+      .faq-item.open {
+        background: var(--purple-pale);
+      }
+      .faq-q {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--black);
+        padding: 20px 24px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        transition: color 0.2s;
+      }
+      .faq-item.open .faq-q {
+        color: var(--purple);
+      }
+      .faq-q span {
+        font-size: 22px;
+        color: var(--purple);
+        flex-shrink: 0;
+        font-weight: 300;
+        transition: transform 0.2s;
+      }
+      .faq-item.open .faq-q span {
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        font-size: 14px;
+        color: var(--grey);
+        line-height: 1.7;
+        padding: 0 24px 20px;
+        display: none;
+      }
+      .faq-item.open .faq-a {
+        display: block;
       }
 
       /* RESPONSIVE */
@@ -599,6 +852,7 @@
         .section {
           padding: 72px 24px;
         }
+        .process-grid { grid-template-columns: 1fr; }
         .cards-3 {
           grid-template-columns: 1fr 1fr;
         }
@@ -607,6 +861,9 @@
         }
         .addon-grid {
           grid-template-columns: repeat(4, 1fr) !important;
+        }
+        .pricing-grid {
+          grid-template-columns: 1fr;
         }
         .who-cards {
           grid-template-columns: 1fr;
@@ -640,6 +897,7 @@
 
         /* Hide nav CTA button on mobile */
         .nav-btn { display: none; }
+        .pricing-grid { grid-template-columns: 1fr; }
         .addon-grid { grid-template-columns: 1fr !important; }
 
         /* +2px on body text only — eyebrows, headlines, buttons excluded */
@@ -669,29 +927,24 @@
     <!-- HERO -->
     <div class="hero">
       <div class="hero-eyebrow">
-        &gt;&gt;&nbsp; TikTok Shop and Paid Social Agencies &nbsp;&lt;&lt;
+        &gt;&gt;&nbsp; For TikTok Shop and Paid Social Agencies &nbsp;&lt;&lt;
       </div>
       <h1>
-        We'll Source And Manage <em>High-Converting<br />Content Creators</em> -
-        So You Can Focus On Client Results
+        Done-for-you ad creative system.<em><br />Built to scale.</em>
       </h1>
       <p class="hero-sub">
-        We plug into your agency as the operational backend for creator
-        production. You set the campaign direction. We execute everything
-        creator-side.
+        Three tiers. One system. No hiring, no chasing creators, no ops overhead on your team. Pick the level that matches where you are today.
       </p>
       <button class="btn-cta" onclick="openModal()">
         Book Your Free Strategy Call
       </button>
-      <span class="btn-sub"
-        >15 minutes · We'll map out your creator fulfillment workflow</span
-      >
+      <span class="btn-sub">15 minutes · We'll map out your creative fulfillment workflow</span>
     </div>
 
     <!-- VIDEO SCROLL -->
     <div class="video-scroll-section">
       <div class="video-scroll-header">
-        <div class="pill" style="margin-bottom: 0">» &nbsp;Our Work</div>
+        <div class="pill" style="margin-bottom: 0">» &nbsp;Content We've Produced</div>
         <div class="scroll-arrows">
           <button class="arrow-btn" id="scrollLeft">&#8592;</button>
           <button class="arrow-btn" id="scrollRight">&#8594;</button>
@@ -819,7 +1072,7 @@
       </div>
       <div class="stat">
         <div class="stat-num">0</div>
-        <div class="stat-label">Done-for-you — sourcing to delivery</div>
+        <div class="stat-label">New hires needed on your team</div>
       </div>
       <div class="stat">
         <div class="stat-num">FAST</div>
@@ -830,286 +1083,160 @@
     <!-- CLIENTS -->
     <div class="clients-section">
       <div class="pill" style="margin-bottom: 16px;">» &nbsp;Previous Clients</div>
-      <p class="clients-heading">Brands We've Created For</p>
+      <p class="clients-heading">Trusted By Leading Brands</p>
       <div class="marquee-row">
         <div class="marquee-inner">
-          <div class="logo-pill">ExpressVPN</div>
-          <div class="logo-pill">copy.ai</div>
-          <div class="logo-pill">Mejuri</div>
-          <div class="logo-pill">Three Ships</div>
-          <div class="logo-pill">Hopper</div>
-          <div class="logo-pill">Royal Match</div>
-          <div class="logo-pill">ROAR Organic</div>
-          <div class="logo-pill">WeCook</div>
-          <div class="logo-pill">Basic Eco</div>
-          <div class="logo-pill">Sheen</div>
-          <div class="logo-pill">Winways</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=expressvpn.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">ExpressVPN</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=copy.ai&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">copy.ai</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=jaumo.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Jaumo</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=mejuri.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Mejuri</div>
+          <div class="logo-pill"><img src="three_ships.jpeg" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;object-fit:cover;">Three Ships</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=peace-collective.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Peace Collective</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=roarorganic.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">ROAR Organic</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=wecookmeals.ca&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">WeCook</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=hopper.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Hopper</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">TikTok</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=royalmatch.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Royal Match</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=blendercap.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Blender Cap</div>
           <!-- Duplicate for seamless loop -->
-          <div class="logo-pill">ExpressVPN</div>
-          <div class="logo-pill">copy.ai</div>
-          <div class="logo-pill">Mejuri</div>
-          <div class="logo-pill">Three Ships</div>
-          <div class="logo-pill">Hopper</div>
-          <div class="logo-pill">Royal Match</div>
-          <div class="logo-pill">ROAR Organic</div>
-          <div class="logo-pill">WeCook</div>
-          <div class="logo-pill">Basic Eco</div>
-          <div class="logo-pill">Sheen</div>
-          <div class="logo-pill">Winways</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=expressvpn.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">ExpressVPN</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=copy.ai&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">copy.ai</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=jaumo.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Jaumo</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=mejuri.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Mejuri</div>
+          <div class="logo-pill"><img src="three_ships.jpeg" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;object-fit:cover;">Three Ships</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=peace-collective.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Peace Collective</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=roarorganic.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">ROAR Organic</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=wecookmeals.ca&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">WeCook</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=hopper.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Hopper</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">TikTok</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=royalmatch.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Royal Match</div>
+          <div class="logo-pill"><img src="https://www.google.com/s2/favicons?domain=blendercap.com&sz=64" onerror="this.style.display='none'" style="height:20px;width:20px;vertical-align:middle;margin-right:8px;border-radius:4px;">Blender Cap</div>
         </div>
       </div>
     </div>
 
-    <!-- PROBLEM -->
+    <!-- PRICING TIERS -->
+    <div class="section" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="section-inner">
+        <div class="pill">» &nbsp;Choose Your Plan</div>
+        <h2>Three Tiers. <em>One System.</em></h2>
+        <p class="section-desc">Pick the level that matches where you are today. Every plan is fully managed — no hiring, no chasing creators, no ops overhead on your team.</p>
+        <div class="pricing-grid">
+
+          <div class="ptier-card">
+            <div class="ptier-label">Tier 1</div>
+            <div class="ptier-name">Source and Manage</div>
+            <div class="pter-price">Starting at $500 <span>/ month</span></div>
+            <div class="pter-volume">Creator workflow management</div>
+            <div class="pter-desc">We plug into your campaigns and handle every creator touchpoint — from sourcing to final delivery.</div>
+            <hr class="pter-divider">
+            <div class="pter-includes">What's included</div>
+            <div class="pter-item">Creator sourcing and vetting</div>
+            <div class="pter-item">Briefing and onboarding</div>
+            <div class="pter-item">Timeline and revision management</div>
+            <div class="pter-item">Deliverable collection and QC</div>
+            <div class="pter-item">Organized file delivery to your team</div>
+            <div class="pter-cta">
+              <button class="pter-btn" onclick="openModal()">Book a call</button>
+            </div>
+          </div>
+
+          <div class="ptier-card featured">
+            <div class="ptier-popular">Most popular</div>
+            <div class="ptier-label">Tier 2</div>
+            <div class="ptier-name">Produce and Deliver</div>
+            <div class="pter-price">Starting at $1,500 <span>/ month</span></div>
+            <div class="pter-volume">8+ ads per month</div>
+            <div class="pter-desc">A guaranteed volume of polished UGC ads delivered every month. You brief the campaign, we handle everything else.</div>
+            <hr class="pter-divider">
+            <div class="pter-includes">Everything in Tier 1, plus</div>
+            <div class="pter-item">Guaranteed monthly ad volume</div>
+            <div class="pter-item">Multi-creator production pipeline</div>
+            <div class="pter-item">Script writing and creative direction</div>
+            <div class="pter-item">Video editing and final formatting</div>
+            <div class="pter-item">Monthly performance debrief</div>
+            <div class="pter-cta">
+              <button class="pter-btn primary" onclick="openModal()">Book a call</button>
+            </div>
+          </div>
+
+          <div class="ptier-card">
+            <div class="ptier-label">Tier 3</div>
+            <div class="ptier-name">Build and Scale</div>
+            <div class="pter-price">Starting at $2,500 <span>/ month</span></div>
+            <div class="pter-volume">10+ ads per month + Meta media buying</div>
+            <div class="pter-desc">Full-stack content production plus paid distribution. We build the creatives and run your Meta campaigns end to end.</div>
+            <hr class="pter-divider">
+            <div class="pter-includes">Everything in Tier 1 and 2, plus</div>
+            <div class="pter-item">Meta ad account management</div>
+            <div class="pter-item">Campaign setup, launch and optimization</div>
+            <div class="pter-item">Creative testing and iteration</div>
+            <div class="pter-item">Weekly reporting and spend oversight</div>
+            <div class="pter-item">Dedicated account strategist</div>
+            <div class="pter-cta">
+              <button class="pter-btn" onclick="openModal()">Book a call</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
     <div class="section">
       <div class="section-inner">
-        <div class="pill">⚠️ &nbsp;The Problem</div>
-        <h2>
-          Your Agency is Growing.<br />But <em>Creator Operations</em> Is
-          Slowing You Down
-        </h2>
-        <p class="section-desc">
-          You've built something real... a service that gets results. But your
-          calendar doesn't stay full. You've probably tried a few of these
-          already...
-        </p>
-        <div class="cards-3">
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="no_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"Creators keep flaking on us."</h3>
-            <p>
-              You brief them, they ghost. You re-source, the timeline slips. The
-              client asks questions you don't have answers to yet.
-            </p>
+        <div class="pill">» &nbsp;How It Works</div>
+        <h2>Up and Running <em>in Three Steps.</em></h2>
+        <p class="section-desc">No long onboarding. No back-and-forth. Just a clear system that plugs into your current systems.</p>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <div class="process-title">Book a strategy call</div>
+            <div class="process-desc">We spend 15 minutes learning about you, your clients, and your current content workflow. Together we identify which tier fits best and what results to expect.</div>
           </div>
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="mail_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"We're drowning in DMs and follow-ups."</h3>
-            <p>
-              Someone on your team is spending hours chasing deliverables,
-              managing revisions, and herding creators instead of doing actual
-              strategy work.
-            </p>
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <div class="process-title">We build your system</div>
+            <div class="process-desc">Once onboarded, we source and vet creators, set up your briefing pipeline, and get your first batch of content in production — all without you having to manage a thing.</div>
           </div>
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="graph_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"We can't scale without hiring."</h3>
-            <p>
-              Every new client means more creator volume. More volume means more
-              ops work. You're stuck choosing between growth and bandwidth.
-            </p>
-          </div>
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="target_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"Sourcing eats our whole week."</h3>
-            <p>
-              Finding creators that actually fit the brief — right niche, right
-              demographic, right quality level — takes time you don't have at
-              scale.
-            </p>
-          </div>
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="revison_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"Revisions kill our turnaround."</h3>
-            <p>
-              Content comes back off-brief. You send revision notes. The creator
-              goes quiet for three days. The campaign launch gets pushed again.
-            </p>
-          </div>
-          <div class="pcard">
-            <div class="pcard-icon">
-              <img src="folder_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <h3>"Our creator workflow is a mess."</h3>
-            <p>
-              Spreadsheets, Slack threads, Google Drive folders with no system.
-              Nothing is repeatable. Everything depends on whoever has the
-              context in their head.
-            </p>
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <div class="process-title">Content lands in your account</div>
+            <div class="process-desc">Polished, on-brief UGC ads delivered directly to your team on a recurring schedule. Ready to launch on TikTok, Meta, or wherever your clients need them.</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SOLUTION -->
-    <div
-      class="section"
-      style="
-        background: #151515;
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      "
-    >
+    <!-- FAQ -->
+    <div class="section" style="background: var(--white); border-top: 1px solid var(--border);">
       <div class="section-inner">
-        <div class="pill">» &nbsp;The Solution</div>
-        <h2>Creator Operations, <em>Handled End-to-End</em></h2>
-        <p class="section-desc">
-          We plug into your agency as the operational backend for creator
-          production. You set the campaign direction. We execute everything
-          creator-side.
-        </p>
-        <div class="sol-cards">
-          <div class="scard">
-            <div class="scard-icon">
-              <img src="one_icon.svg" style="width: 60px; height: 60px" />
-            </div>
-            <h3>Creator Sourcing</h3>
-            <p>
-              We find vetted creators that match your campaign brief — right
-              niche, right demographics, right content style. No more posting in
-              Facebook groups and praying. We've built the network so you don't
-              have to.
-            </p>
+        <div class="pill">» &nbsp;FAQ</div>
+        <h2>Common <em>Questions.</em></h2>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <div class="faq-q">What's the minimum commitment? <span>+</span></div>
+            <div class="faq-a">We work on a monthly retainer with a 2-month minimum. This gives us enough time to build your creator pipeline and deliver consistent results before evaluating fit.</div>
           </div>
-          <div class="scard">
-            <div class="scard-icon">
-              <img src="two_icon.svg" style="width: 60px; height: 60px" />
-            </div>
-            <h3>Creator Coordination</h3>
-            <p>
-              We manage all creator communication — briefing, timelines,
-              check-ins, and revision rounds. Your team sends us the brief. We
-              handle the back-and-forth so your account managers can stay
-              client-facing.
-            </p>
+          <div class="faq-item">
+            <div class="faq-q">How fast can we get started? <span>+</span></div>
+            <div class="faq-a">Most clients are fully onboarded within 5–7 business days of signing. Creator sourcing begins immediately and first deliverables typically land within 2–3 weeks.</div>
           </div>
-          <div class="scard">
-            <div class="scard-icon">
-              <img src="three_icon.svg" style="width: 60px; height: 60px" />
-            </div>
-            <h3>Content Fulfillment</h3>
-            <p>
-              Deliverable collection, file organization, and quality checks —
-              all structured and delivered clean. No more chasing assets across
-              12 different DM threads. You get a system that actually works.
-            </p>
+          <div class="faq-item">
+            <div class="faq-q">How many revisions do we get? <span>+</span></div>
+            <div class="faq-a">Every deliverable comes with one round of revisions included. Additional revision rounds can be arranged depending on your tier and brief complexity.</div>
           </div>
-        </div>
-        <div class="cta-block">
-          <button class="btn-cta" onclick="openModal()">
-            Book Your Free Strategy Call
-          </button>
-          <span class="btn-sub"
-            >15 minutes · We'll map out your creator fulfillment workflow</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- WHO WE WORK WITH -->
-    <div class="section">
-      <div class="section-inner">
-        <div class="pill">» &nbsp;Who We Work With</div>
-        <h2>Built For Agencies <em>Running</em> Creator-Heavy Campaigns</h2>
-        <p class="section-desc">
-          This isn't for brands posting twice a week. This is for operationally
-          overwhelmed teams that are already using content at scale.
-        </p>
-        <div class="who-cards">
-          <div class="wcard">
-            <div class="wcard-icon">
-              <img src="astrix_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <div>
-              <h3>TikTok Shop Agencies</h3>
-              <p>
-                Running affiliate creator campaigns at volume with no clean ops
-                system behind them
-              </p>
-            </div>
+          <div class="faq-item">
+            <div class="faq-q">Do we own the content? <span>+</span></div>
+            <div class="faq-a">Yes — all content produced through TrendSet Media is fully owned by your company. We handle creator licensing as part of the service.</div>
           </div>
-          <div class="wcard">
-            <div class="wcard-icon">
-              <img src="astrix_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <div>
-              <h3>Paid Social Agencies</h3>
-              <p>
-                Testing UGC creatives for ecommerce clients and constantly
-                running out of fresh content
-              </p>
-            </div>
+          <div class="faq-item">
+            <div class="faq-q">Can we upgrade or change tiers? <span>+</span></div>
+            <div class="faq-a">Absolutely. You can upgrade at any time and we'll adjust your pipeline accordingly. Downgrades take effect at the start of the next billing period.</div>
           </div>
-          <div class="wcard">
-            <div class="wcard-icon">
-              <img src="astrix_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <div>
-              <h3>Amazon &amp; Influencer Agencies</h3>
-              <p>
-                Sourcing UGC for product listings, review content, and
-                off-platform social campaigns
-              </p>
-            </div>
-          </div>
-          <div class="wcard">
-            <div class="wcard-icon">
-              <img src="astrix_icon.svg" style="width: 36px; height: 36px" />
-            </div>
-            <div>
-              <h3>DTC Brands with Creative Teams</h3>
-              <p>
-                Need creator volume without adding internal headcount or a full
-                influencer management stack
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="cta-block">
-          <button class="btn-cta" onclick="openModal()">
-            Book Your Free Strategy Call
-          </button>
-          <span class="btn-sub"
-            >15 minutes · We'll map out your creator fulfillment workflow</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- ADD-ON SERVICES -->
-    <div class="section">
-      <div class="section-inner">
-        <div class="pill">» &nbsp;Add-on Services</div>
-        <h2>Extend Your <em>Package</em></h2>
-        <p class="section-desc">Need more than creator fulfillment? Stack on any of these services to build a full end-to-end content operation.</p>
-        <div class="cards-3 addon-grid" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
-            <div class="wcard-icon">
-              <img src="revison_icon.svg" style="width: 36px; height: 36px;" />
-            </div>
-            <h3 style="margin: 0;">Video editing</h3>
-            <p style="margin: 0;">Fast, on-brand edits optimized for TikTok and paid social.</p>
-          </div>
-          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
-            <div class="wcard-icon">
-              <img src="graph_icon.svg" style="width: 36px; height: 36px;" />
-            </div>
-            <h3 style="margin: 0;">Creative strategy</h3>
-            <p style="margin: 0;">Hook angles, content pillars, and briefs built around your brand goals.</p>
-          </div>
-          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
-            <div class="wcard-icon">
-              <img src="mail_icon.svg" style="width: 36px; height: 36px;" />
-            </div>
-            <h3 style="margin: 0;">Script writing</h3>
-            <p style="margin: 0;">High-converting scripts written for UGC-native performance.</p>
-          </div>
-          <div class="wcard" style="flex-direction: column; align-items: flex-start; gap: 12px;">
-            <div class="wcard-icon">
-              <img src="target_icon.svg" style="width: 36px; height: 36px;" />
-            </div>
-            <h3 style="margin: 0;">Meta ad management</h3>
-            <p style="margin: 0;">We run and optimize your paid social campaigns end to end.</p>
+          <div class="faq-item">
+            <div class="faq-q">What platforms do you create content for? <span>+</span></div>
+            <div class="faq-a">We primarily produce content for TikTok, Meta (Facebook and Instagram), YouTube and Amazon. All content is formatted and optimized for the platform your client needs.</div>
           </div>
         </div>
       </div>
@@ -1118,18 +1245,14 @@
     <!-- FINAL CTA -->
     <div class="final-section">
       <div class="final-divider"></div>
-      <h2>Stop Managing Creators.<em>Start Scaling Production.</em></h2>
+      <h2>Ready to Scale Your Content?<em>Pick a Tier. Let Us Handle the Rest.</em></h2>
       <p>
-        Book a free 15-minute call. We'll look at your current creator workflow,
-        identify the bottlenecks, and map out what a done-for-you fulfillment
-        system would look like for your agency.
+        15 minutes is all it takes. Tell us where you're at and we'll show you how TrendSet Media plugs in — from creator sourcing to paid distribution.
       </p>
-      <button class="btn-cta" onclick="openModal()">
+      <button class="btn-cta" onclick="openModal()" style="background:#3D2A9E; color:#fff; border-radius:999px;">
         Book Your Free Strategy Call
       </button>
-      <span class="btn-sub"
-        >15 minutes · We'll map out your creator fulfillment workflow</span
-      >
+      <span class="btn-sub" style="color:#555;">15 minutes · We'll map out your creative fulfillment workflow</span>
     </div>
 
     <!-- FOOTER -->
@@ -1204,6 +1327,15 @@
             track.scrollBy({ left: 316, behavior: "smooth" });
           }
         }, 3000);
+      });
+      // FAQ accordion
+      document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.parentElement;
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+          if (!isOpen) item.classList.add('open');
+        });
       });
     </script>
   </body>
